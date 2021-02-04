@@ -1,1 +1,849 @@
+@prefix : <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix maiMus: <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#> .
+@prefix watMus: <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#> .
 
+<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#> rdf:type owl:Ontology ;
+                                                                           dcterms:creator "Maitha Khanji"^^xsd:string ;
+                                                                           dcterms:description "Music Ontology that models data in the Music domain. The ontology represnts knowledge and answers questions about Music tracks in Watt Radio."^^xsd:string ;
+                                                                           dcterms:title "Watt Radio Music Ontolgoy"^^xsd:string ;
+                                                                           owl:versionInfo "0.1"^^xsd:double .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#belongsTo
+maiMus:belongsTo rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ,
+                                    maiMus:categorizedAs ;
+                 rdfs:domain maiMus:MusicTrack ;
+                 rdfs:range maiMus:Song ;
+                 <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                 <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:13:27Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#categorizedAs
+maiMus:categorizedAs rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdf:type owl:TransitiveProperty ;
+                     rdfs:domain maiMus:MusicTrack ,
+                                 maiMus:Song ;
+                     rdfs:range <https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre> ;
+                     <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                     <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:29:19Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#compose
+maiMus:compose rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               owl:inverseOf maiMus:composedBy ;
+               rdfs:domain maiMus:Composer ;
+               rdfs:range maiMus:Song ;
+               <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+               <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:49:04Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#composedBy
+maiMus:composedBy rdf:type owl:ObjectProperty ;
+                  <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                  <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:48:54Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics
+maiMus:hasLyrics rdf:type owl:ObjectProperty ;
+                 owl:inverseOf maiMus:lyricsOf ;
+                 <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                 <http://purl.org/dc/elements/1.1/date> "2021-02-04T08:02:18Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasSong
+maiMus:hasSong rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               owl:inverseOf maiMus:withinAlbum ;
+               rdfs:domain <https://github.com/soso-maitha/ontologies/WattMusicOntology#Album> ;
+               rdfs:range maiMus:Song ;
+               <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+               <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:40:53Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#lyricsOf
+maiMus:lyricsOf rdf:type owl:ObjectProperty ;
+                rdfs:domain maiMus:Lyrics ;
+                rdfs:range maiMus:Song ;
+                <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                <http://purl.org/dc/elements/1.1/date> "2021-02-04T08:02:03Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#played
+maiMus:played rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              owl:inverseOf maiMus:playedBy ;
+              <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+              <http://purl.org/dc/elements/1.1/date> "2021-02-04T08:17:14Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedBy
+maiMus:playedBy rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain maiMus:MusicTrack ;
+                rdfs:range maiMus:DJ ;
+                <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                <http://purl.org/dc/elements/1.1/date> "2021-02-04T06:32:01Z"^^xsd:dateTime ;
+                dcterms:description "A music track is played by a DJ"^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#releasedBy
+maiMus:releasedBy rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain <https://github.com/soso-maitha/ontologies/WattMusicOntology#Album> ;
+                  rdfs:range maiMus:MusicCompany ;
+                  <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                  <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:12:27Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sings
+maiMus:sings rdf:type owl:ObjectProperty ;
+             owl:inverseOf maiMus:sungBy ;
+             rdfs:domain <https://github.com/soso-maitha/ontologies/WattMusicOntology#Singer> ;
+             rdfs:range maiMus:Song ;
+             <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+             <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:18:20Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sungBy
+maiMus:sungBy rdf:type owl:ObjectProperty ;
+              <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+              <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:20:56Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#withinAlbum
+maiMus:withinAlbum rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                   <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:41:59Z"^^xsd:dateTime .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasName
+maiMus:hasName rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain <https://github.com/soso-maitha/ontologies/WattMusicOntology#Album> ,
+                           maiMus:MusicCompany ,
+                           maiMus:Person ,
+                           maiMus:Song ;
+               rdfs:range xsd:string ;
+               <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+               <http://purl.org/dc/elements/1.1/date> "2021-02-03T20:06:23Z"^^xsd:dateTime ;
+               dcterms:description "has name property, used for Artist name, song name, Album name ..etc any concept that has a name. It is functional because every individual will have only one name."^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedOn
+maiMus:playedOn rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain maiMus:MusicTrack ;
+                rdfs:range xsd:dateTime ;
+                <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                <http://purl.org/dc/elements/1.1/date> "2021-02-03T20:00:15Z"^^xsd:dateTime .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://github.com/soso-maitha/ontologies/WattMusicOntology#Album
+<https://github.com/soso-maitha/ontologies/WattMusicOntology#Album> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Music> ;
+                                                                    owl:disjointWith <https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre> ,
+                                                                                     maiMus:Song ;
+                                                                    <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                                                                    <http://purl.org/dc/elements/1.1/date> "2021-01-30T13:51:08Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre
+<https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Music> ;
+                                                                    <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                                                                    <http://purl.org/dc/elements/1.1/date> "2021-01-30T13:50:41Z"^^xsd:dateTime ;
+                                                                    dcterms:description "Category of Music (eg. Classic music, Flamenco, Jazz, Pop ..etc"^^xsd:string ;
+                                                                    rdfs:label "Genre"^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/WattMusicOntology#Music
+<https://github.com/soso-maitha/ontologies/WattMusicOntology#Music> rdf:type owl:Class ;
+                                                                    owl:disjointWith maiMus:Person ;
+                                                                    <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                                                                    <http://purl.org/dc/elements/1.1/date> "2021-01-30T13:50:32Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/WattMusicOntology#Singer
+<https://github.com/soso-maitha/ontologies/WattMusicOntology#Singer> rdf:type owl:Class ;
+                                                                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty maiMus:sings ;
+                                                                                           owl:someValuesFrom maiMus:Song
+                                                                                         ] ;
+                                                                     rdfs:subClassOf maiMus:Artist ;
+                                                                     <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                                                                     <http://purl.org/dc/elements/1.1/date> "2021-01-30T13:51:01Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicLanguageSpeaker
+maiMus:ArabicLanguageSpeaker rdf:type owl:Class ;
+                             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                   owl:onProperty maiMus:sings ;
+                                                   owl:someValuesFrom maiMus:ArabicSong
+                                                 ] ;
+                             rdfs:subClassOf maiMus:Person ;
+                             owl:disjointWith maiMus:SpanishLanguageSpeaker ;
+                             <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                             <http://purl.org/dc/elements/1.1/date> "2021-02-04T09:31:47Z"^^xsd:dateTime ;
+                             dcterms:description "A person who speaks the Arabic lanaguage"^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic
+maiMus:ArabicMusic rdf:type owl:Class ;
+                   rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre> ;
+                   <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                   <http://purl.org/dc/elements/1.1/date> "2021-02-03T20:31:02Z"^^xsd:dateTime ;
+                   rdfs:label "Arabic Pop Music"^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicPop
+maiMus:ArabicPop rdf:type owl:Class ;
+                 rdfs:subClassOf maiMus:ArabicMusic ;
+                 <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                 <http://purl.org/dc/elements/1.1/date> "2021-02-04T11:00:24Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicSong
+maiMus:ArabicSong rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty maiMus:categorizedAs ;
+                                        owl:someValuesFrom maiMus:ArabicMusic
+                                      ] ;
+                  rdfs:subClassOf maiMus:Song .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Artist
+maiMus:Artist rdf:type owl:Class ;
+              rdfs:subClassOf maiMus:MusicStaff ;
+              <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+              <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:56:33Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicEnglish
+maiMus:ClassicEnglish rdf:type owl:Class ;
+                      rdfs:subClassOf maiMus:EnglishMusic .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicLatin
+maiMus:ClassicLatin rdf:type owl:Class ;
+                    rdfs:subClassOf maiMus:LatinMusic .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Composer
+maiMus:Composer rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty maiMus:compose ;
+                                      owl:someValuesFrom maiMus:Song
+                                    ] ;
+                rdfs:subClassOf maiMus:Artist ;
+                <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:47:21Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#DJ
+maiMus:DJ rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty maiMus:played ;
+                                owl:someValuesFrom maiMus:Song
+                              ] ;
+          rdfs:subClassOf maiMus:MusicStaff ;
+          <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+          <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:59:50Z"^^xsd:dateTime ;
+          dcterms:description "DJ is a person who playes the Music Track"^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishJaz
+maiMus:EnglishJaz rdf:type owl:Class ;
+                  rdfs:subClassOf maiMus:EnglishMusic ;
+                  <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                  <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:31:30Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishLanugageSpeaker
+maiMus:EnglishLanugageSpeaker rdf:type owl:Class ;
+                              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                    owl:onProperty maiMus:sings ;
+                                                    owl:someValuesFrom maiMus:EnglishSong
+                                                  ] ;
+                              rdfs:subClassOf maiMus:Person ;
+                              <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                              <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:30:25Z"^^xsd:dateTime ;
+                              dcterms:description "A person who speaks the English lanaguage"^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishMusic
+maiMus:EnglishMusic rdf:type owl:Class ;
+                    rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre> ;
+                    <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                    <http://purl.org/dc/elements/1.1/date> "2021-02-03T20:08:17Z"^^xsd:dateTime ;
+                    rdfs:label "Classic Music"^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishPop
+maiMus:EnglishPop rdf:type owl:Class ;
+                  rdfs:subClassOf maiMus:EnglishMusic ;
+                  <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                  <http://purl.org/dc/elements/1.1/date> "2021-02-04T11:00:32Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishSong
+maiMus:EnglishSong rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty maiMus:categorizedAs ;
+                                         owl:someValuesFrom maiMus:EnglishMusic
+                                       ] ;
+                   rdfs:subClassOf maiMus:Song .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LatinMusic
+maiMus:LatinMusic rdf:type owl:Class ;
+                  rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre> ;
+                  <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                  <http://purl.org/dc/elements/1.1/date> "2021-02-03T20:30:05Z"^^xsd:dateTime ;
+                  rdfs:label "Flamenco Music"^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LatinPop
+maiMus:LatinPop rdf:type owl:Class ;
+                rdfs:subClassOf maiMus:LatinMusic .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LatinSong
+maiMus:LatinSong rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                       owl:onProperty maiMus:categorizedAs ;
+                                       owl:someValuesFrom maiMus:LatinMusic
+                                     ] ;
+                 rdfs:subClassOf maiMus:Song .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics
+maiMus:Lyrics rdf:type owl:Class ;
+              rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Music> ;
+              <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+              <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:33:53Z"^^xsd:dateTime ;
+              dcterms:description "Class that represnts Songs Lyrics. Lyrics are fond in the dcterms:describtion annotation"^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Maqam
+maiMus:Maqam rdf:type owl:Class ;
+             rdfs:subClassOf maiMus:ArabicMusic ;
+             owl:disjointWith maiMus:Mawwal ;
+             <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+             <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:27:03Z"^^xsd:dateTime ;
+             dcterms:description "Maqam is one of the ways to categorize classic Arabic songs"^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamHijaz
+maiMus:MaqamHijaz rdf:type owl:Class ;
+                  rdfs:subClassOf maiMus:Maqam .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamNahawand
+maiMus:MaqamNahawand rdf:type owl:Class ;
+                     rdfs:subClassOf maiMus:Maqam ;
+                     <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                     <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:47:05Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamSaba
+maiMus:MaqamSaba rdf:type owl:Class ;
+                 rdfs:subClassOf maiMus:Maqam .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Mawwal
+maiMus:Mawwal rdf:type owl:Class ;
+              rdfs:subClassOf maiMus:ArabicMusic ;
+              <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+              <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:27:03Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicCompany
+maiMus:MusicCompany rdf:type owl:Class ;
+                    rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Music> ;
+                    <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                    <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:12:17Z"^^xsd:dateTime ;
+                    dcterms:description "Company or Studio that procuded the album / song"^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicStaff
+maiMus:MusicStaff rdf:type owl:Class ;
+                  rdfs:subClassOf maiMus:Person ;
+                  <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                  <http://purl.org/dc/elements/1.1/date> "2021-02-04T06:56:18Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack
+maiMus:MusicTrack rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty maiMus:playedBy ;
+                                        owl:someValuesFrom maiMus:DJ
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty maiMus:playedOn ;
+                                        owl:someValuesFrom xsd:dateTime
+                                      ] ;
+                  rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Music> ;
+                  <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                  <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:57:15Z"^^xsd:dateTime ;
+                  dcterms:description "Calss that represents Music Track played on Watt Radio stations"^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Person
+maiMus:Person rdf:type owl:Class ;
+              owl:disjointWith maiMus:Song ;
+              <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+              <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:21:39Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Producer
+maiMus:Producer rdf:type owl:Class ;
+                rdfs:subClassOf maiMus:MusicStaff ;
+                <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                <http://purl.org/dc/elements/1.1/date> "2021-02-04T06:28:01Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ReleaseDate
+maiMus:ReleaseDate rdf:type owl:Class ;
+                   rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Album> ;
+                   <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                   <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:34:15Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Samba
+maiMus:Samba rdf:type owl:Class ;
+             rdfs:subClassOf maiMus:LatinMusic ;
+             <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+             <http://purl.org/dc/elements/1.1/date> "2021-02-04T11:00:09Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Song
+maiMus:Song rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty maiMus:categorizedAs ;
+                                  owl:someValuesFrom <https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre>
+                                ] ;
+            rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Music> ;
+            <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+            <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:18:31Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishLanguageSpeaker
+maiMus:SpanishLanguageSpeaker rdf:type owl:Class ;
+                              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                    owl:onProperty maiMus:sings ;
+                                                    owl:someValuesFrom maiMus:LatinSong
+                                                  ] ;
+                              rdfs:subClassOf maiMus:Person ;
+                              <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                              <http://purl.org/dc/elements/1.1/date> "2021-02-04T09:31:47Z"^^xsd:dateTime ;
+                              dcterms:description "A person who speaks the Latin lanaguage"^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Technician
+maiMus:Technician rdf:type owl:Class ;
+                  rdfs:subClassOf maiMus:MusicStaff ;
+                  <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                  <http://purl.org/dc/elements/1.1/date> "2021-02-04T06:28:23Z"^^xsd:dateTime .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Adagio
+maiMus:Adagio rdf:type owl:NamedIndividual ,
+                       <https://github.com/soso-maitha/ontologies/WattMusicOntology#Singer> ;
+              <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+              <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:07:03Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Ahmed
+maiMus:Ahmed rdf:type owl:NamedIndividual ;
+             maiMus:played maiMus:Track_2 ;
+             <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+             <http://purl.org/dc/elements/1.1/date> "2021-02-04T09:01:06Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#BoshretKheir
+maiMus:BoshretKheir rdf:type owl:NamedIndividual ;
+                    maiMus:categorizedAs maiMus:Khaleeji ;
+                    maiMus:sungBy maiMus:HussainAlJesmi ;
+                    <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                    <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:38:48Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicEnglish
+maiMus:ClassicEnglish rdf:type owl:NamedIndividual ,
+                               maiMus:EnglishMusic .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicLatin
+maiMus:ClassicLatin rdf:type owl:NamedIndividual ,
+                             maiMus:LatinMusic .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Despacito
+maiMus:Despacito rdf:type owl:NamedIndividual ,
+                          maiMus:LatinPop ;
+                 maiMus:categorizedAs maiMus:LatinPop ;
+                 maiMus:hasLyrics maiMus:DespacitoLyrics ;
+                 <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                 <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:30:58Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#DespacitoLyrics
+maiMus:DespacitoLyrics rdf:type owl:NamedIndividual ;
+                       <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                       <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:32:04Z"^^xsd:dateTime ;
+                       dcterms:description """Ay
+Fonsi
+DY
+Oh-oh
+Oh no, oh no (oh)
+Hey yeah
+Diridiri, dirididi Daddy
+Go
+Sí, sabes que ya llevo un rato mirándote
+Tengo que bailar contigo hoy (DY)
+Vi que tu mirada ya estaba llamándome
+Muéstrame el camino que yo voy
+Oh
+Tú, tú eres el imán y yo soy el metal
+Me voy acercando y voy armando el plan
+Solo con pensarlo se acelera el pulso
+Oh yeah
+Ya, ya me está gustando más de lo normal
+Todos mis sentidos van pidiendo más
+Esto hay que tomarlo sin ningún apuro
+Despacito
+Quiero respirar tu cuello despacito
+Deja que te diga cosas al oído
+Para que te acuerdes si no estás conmigo
+Despacito
+Quiero desnudarte a besos despacito
+Firmar las paredes de tu laberinto
+Y hacer de tu cuerpo todo un manuscrito (sube, sube, sube)
+(Sube, sube) Oh
+Quiero ver bailar tu pelo
+Quiero ser tu ritmo (eh-oh) (uh-oh, uh-oh)
+Que le enseñes a mi boca (eh-oh) (uh-oh, uh-oh)
+Tus lugares favoritos (eh-oh) (favoritos, favoritos baby)
+Déjame sobrepasar
+Tus zonas de peligro (eh-oh) (uh-oh, uh-oh)
+Hasta provocar tus gritos (uh-oh, uh-oh)
+Y que olvides tu apellido (diridiri, dirididi Daddy)
+Yo sé que estás pensándolo (yeh)
+Llevo tiempo intentándolo (yeh)
+Mami, esto es dando y dándolo
+Sabes que tu corazón conmigo te hace bam bam
+Sabe que esa beba 'tá buscando de mi bam bam
+Ven prueba de mi boca para ver cómo te sabe (eh-eh)
+Quiero, quiero, quiero ver cuánto amor a ti te cabe
+Yo no tengo prisa, yo me quiero dar el viaje
+Empezamo' lento, después salvaje
+Pasito a pasito, suave suavecito
+Nos vamos pegando poquito a poquito
+Cuando tú me besas con esa destreza
+Veo que eres malicia con delicadeza
+Pasito a pasito, suave suavecito
+Nos vamos pegando, poquito a poquito (oh oh)
+Y es que esa belleza es un rompecabezas (oh no)
+Pero pa montarlo aquí tengo la pieza (slow, oh yeah)
+Despacito (yeh, go)
+Quiero respirar tu cuello despacito (yeh)
+Deja que te diga cosas al oído (yeh)
+Para que te acuerdes si no estás conmigo
+Despacito
+Quiero desnudarte a besos despacito (yeh)
+Firmar las paredes de tu laberinto
+Y hacer de tu cuerpo todo un manuscrito (sube, sube, sube)
+(Sube, sube) Oh
+Quiero ver bailar tu pelo
+Quiero ser tu ritmo (eh-oh) (uh-oh, uh-oh)
+Que le enseñes a mi boca (eh-oh) (uh-oh, uh-oh)
+Tus lugares favoritos (eh-oh) (favoritos, favoritos baby)
+Déjame sobrepasar
+Tus zonas de peligro (eh-oh) (uh-oh, uh-oh)
+Hasta provocar tus gritos (uh-oh, uh-oh)
+Y que olvides tu apellido (eh-oh)
+Despacito
+Vamo' a hacerlo en una playa en Puerto Rico
+Hasta que las olas griten \"Ay, bendito\"
+Para que mi sello se quede contigo (báilalo)
+Pasito a pasito, suave suavecito (hey yeah, yeah)
+Nos vamos pegando, poquito a poquito (oh no)
+Que le enseñes a mi boca (eh-oh) (uh-oh, uh-oh)
+Tus lugares favoritos (eh-oh) (favoritos, favoritos baby)
+Pasito a pasito, suave suavecito
+Nos vamos pegando, poquito a poquito (eh-oh)
+Hasta provocar tus gritos (eh-oh) (Fonsi)
+Y que olvides tu apellido (DY)
+Despacito"""^^xsd:string ;
+                       rdfs:comment "Lyrics of Dispacito song"^^xsd:string .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#HussainAlJesmi
+maiMus:HussainAlJesmi rdf:type owl:NamedIndividual ;
+                      <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                      <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:39:24Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#InTheMorningLight
+maiMus:InTheMorningLight rdf:type owl:NamedIndividual ,
+                                  maiMus:Song ;
+                         maiMus:categorizedAs maiMus:ClassicEnglish ;
+                         <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                         <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:41:46Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#KadhemAlSaher
+maiMus:KadhemAlSaher rdf:type owl:NamedIndividual ;
+                     maiMus:sings maiMus:YesterdayInTheDream ;
+                     <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                     <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:41:11Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Khaleeji
+maiMus:Khaleeji rdf:type owl:NamedIndividual ,
+                         maiMus:ArabicMusic .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LatinPop
+maiMus:LatinPop rdf:type owl:NamedIndividual ,
+                         maiMus:LatinMusic .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LuisFonsi
+maiMus:LuisFonsi rdf:type owl:NamedIndividual ;
+                 maiMus:sings maiMus:Despacito ;
+                 <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                 <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:33:34Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Maitha
+maiMus:Maitha rdf:type owl:NamedIndividual ;
+              maiMus:played maiMus:Track_3 ;
+              <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+              <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:07:21Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamHijaz
+maiMus:MaqamHijaz rdf:type owl:NamedIndividual .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamSaba
+maiMus:MaqamSaba rdf:type owl:NamedIndividual ,
+                          maiMus:ArabicMusic .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#NoisematchStudio
+maiMus:NoisematchStudio rdf:type owl:NamedIndividual ,
+                                 maiMus:MusicCompany ;
+                        <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                        <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:34:39Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SabahFakhri
+maiMus:SabahFakhri rdf:type owl:NamedIndividual ;
+                   <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                   <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:46:00Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ScabaYa
+maiMus:ScabaYa rdf:type owl:NamedIndividual ,
+                        maiMus:MaqamSaba ;
+               maiMus:sungBy maiMus:SabahFakhri ;
+               <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+               <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:45:47Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SecretGarden
+maiMus:SecretGarden rdf:type owl:NamedIndividual ;
+                    maiMus:categorizedAs maiMus:ClassicLatin ;
+                    maiMus:sungBy maiMus:Adagio ;
+                    <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                    <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:09:30Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#TheRainMustFall
+maiMus:TheRainMustFall rdf:type owl:NamedIndividual ,
+                                maiMus:EnglishMusic ,
+                                maiMus:Song ;
+                       maiMus:categorizedAs maiMus:ClassicEnglish ;
+                       <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                       <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:46:30Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_1
+maiMus:Track_1 rdf:type owl:NamedIndividual ,
+                        maiMus:MusicTrack ;
+               maiMus:belongsTo maiMus:ScabaYa ;
+               maiMus:playedBy maiMus:Maitha ;
+               maiMus:playedOn "2021-02-03T20:00:15Z"^^xsd:dateTime ;
+               <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+               <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:06:07Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_2
+maiMus:Track_2 rdf:type owl:NamedIndividual ,
+                        maiMus:MusicTrack ;
+               maiMus:belongsTo maiMus:BoshretKheir ;
+               maiMus:playedOn "2021-02-03T09:00:00Z"^^xsd:dateTime ;
+               <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+               <http://purl.org/dc/elements/1.1/date> "2021-02-04T08:57:31Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_3
+maiMus:Track_3 rdf:type owl:NamedIndividual ;
+               maiMus:belongsTo maiMus:YesterdayInTheDream ;
+               maiMus:playedOn "2021-02-03T10:10:00Z"^^xsd:dateTime ;
+               <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+               <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:11:05Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_4
+maiMus:Track_4 rdf:type owl:NamedIndividual ;
+               maiMus:belongsTo maiMus:Despacito ;
+               maiMus:playedBy maiMus:Ahmed ;
+               maiMus:playedOn "2021-02-04T08:00:25Z"^^xsd:dateTime ;
+               <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+               <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:35:25Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_5
+maiMus:Track_5 rdf:type owl:NamedIndividual ;
+               maiMus:belongsTo maiMus:Despacito ;
+               maiMus:playedBy maiMus:Ahmed ;
+               maiMus:playedOn "2021-02-01T10:35:25Z"^^xsd:dateTime ;
+               <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+               <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:36:46Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Vida
+maiMus:Vida rdf:type owl:NamedIndividual ,
+                     <https://github.com/soso-maitha/ontologies/WattMusicOntology#Album> ;
+            maiMus:hasSong maiMus:Despacito ;
+            maiMus:releasedBy maiMus:NoisematchStudio ;
+            <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+            <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:33:00Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Yanni
+maiMus:Yanni rdf:type owl:NamedIndividual ;
+             maiMus:compose maiMus:InTheMorningLight ,
+                            maiMus:TheRainMustFall ;
+             <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+             <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:40:26Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#YesterdayInTheDream
+maiMus:YesterdayInTheDream rdf:type owl:NamedIndividual ;
+                           maiMus:categorizedAs maiMus:MaqamSaba ;
+                           <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                           <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:41:57Z"^^xsd:dateTime .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+maiMus:ClassicEnglish <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                      <http://purl.org/dc/elements/1.1/date> "2021-02-04T11:16:16Z"^^xsd:dateTime ,
+                                                             "2021-02-04T10:58:07Z"^^xsd:dateTime .
+
+
+maiMus:ClassicLatin <http://purl.org/dc/elements/1.1/date> "2021-02-04T14:09:54Z"^^xsd:dateTime ,
+                                                           "2021-02-04T14:08:33Z"^^xsd:dateTime ;
+                    <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string .
+
+
+maiMus:LatinPop <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:30:38Z"^^xsd:dateTime ,
+                                                       "2021-02-04T11:18:59Z"^^xsd:dateTime .
+
+
+maiMus:MaqamHijaz <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:46:47Z"^^xsd:dateTime ;
+                  <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                  <http://purl.org/dc/elements/1.1/date> "2021-02-04T09:19:19Z"^^xsd:dateTime .
+
+
+maiMus:MaqamSaba <http://purl.org/dc/elements/1.1/date> "2021-02-04T09:19:04Z"^^xsd:dateTime ;
+                 <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                 <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:46:20Z"^^xsd:dateTime .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( maiMus:ArabicMusic
+                maiMus:EnglishMusic
+                maiMus:LatinMusic
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( maiMus:ArabicSong
+                maiMus:EnglishSong
+                maiMus:LatinSong
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
