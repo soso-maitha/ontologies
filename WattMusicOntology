@@ -8,6 +8,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:main="https://github.com/soso-maitha/ontologies/blob/main/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:time="http://www.w3.org/2006/time#"
@@ -16,7 +17,8 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:untitled-ontology-5="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#"
      xmlns:untitled-ontology-30="http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#">
-    <owl:Ontology rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#">
+    <owl:Ontology rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology">
+        <owl:versionIRI rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology"/>
         <dcterms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dcterms:creator>
         <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music Ontology that models data in the Music domain. The ontology represnts knowledge and answers questions about Music tracks in Watt Radio.</dcterms:description>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.1</owl:versionInfo>
@@ -125,7 +127,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyisTrackFor"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#belongsTo"/>
         </owl:propertyChainAxiom>
         <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Song belongs to an Album. Functional property since a song can belong to one Album only</dcterms:description>
@@ -136,7 +138,7 @@
     <!-- http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#composedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#composedBy">
-        <owl:equivalentProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#composedBy"/>
+        <owl:equivalentProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologycomposedBy"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">javed</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T08:03:40Z</dc:date>
@@ -157,7 +159,7 @@
     <!-- http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#releasedBY -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#releasedBY">
-        <owl:equivalentProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#releasedByCompany"/>
+        <owl:equivalentProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyreleasedByCompany"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -278,7 +280,7 @@
     <!-- http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#sang -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#sang">
-        <owl:equivalentProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sings"/>
+        <owl:equivalentProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologysings"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#sungby"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Artist"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song"/>
@@ -323,7 +325,7 @@
     <!-- http://www.w3.org/2006/time#dayOfWeek -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#dayOfWeek">
-        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack"/>
+        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicTrack"/>
         <rdfs:range rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
         <rdfs:comment>El día de la semana, cuyo valor es un miembro de la clase &apos;día de la semana&apos;.</rdfs:comment>
         <rdfs:comment>Note: this object property was originally imported from music ontology which imports it from time ontology. It is reused and &quot;modified&quot; in our HW Radio Music ontology to represents which day of the week a MusicTrack was played.</rdfs:comment>
@@ -387,21 +389,21 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#compose -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologycompose -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#compose">
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologycompose">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#composedBy"/>
-        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Composer"/>
+        <owl:inverseOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologycomposedBy"/>
+        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyComposer"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T19:49:04Z</dc:date>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#composedBy -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologycomposedBy -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#composedBy">
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologycomposedBy">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T19:48:54Z</dc:date>
@@ -409,10 +411,10 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasCountryOfOrigin -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasCountryOfOrigin -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasCountryOfOrigin">
-        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Person"/>
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasCountryOfOrigin">
+        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyPerson"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Country"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-18T18:22:43Z</dc:date>
@@ -420,16 +422,16 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasGenre -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre">
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasGenre">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack"/>
+        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicTrack"/>
         <rdfs:range rdf:resource="https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor"/>
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyisTrackFor"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasGenre"/>
         </owl:propertyChainAxiom>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:29:19Z</dc:date>
@@ -437,12 +439,12 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasLyrics -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics">
-        <owl:inverseOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#lyricsOf"/>
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasLyrics">
+        <owl:inverseOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologylyricsOf"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song"/>
-        <rdfs:range rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics"/>
+        <rdfs:range rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLyrics"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T08:02:18Z</dc:date>
         <rdfs:comment>An object property that represents relationship between instances of two classes Song has Lyrics</rdfs:comment>
@@ -450,11 +452,11 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasSong -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasSong -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasSong">
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasSong">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#withinAlbum"/>
+        <owl:inverseOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologywithinAlbum"/>
         <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/WattMusicOntology#Album"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
@@ -463,9 +465,9 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasTrack -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasTrack -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasTrack">
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasTrack">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-18T16:38:32Z</dc:date>
         <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a Song has Track(s). It is Inverse functional property because many tacks of the same song can belong to one song</dcterms:description>
@@ -473,32 +475,32 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyisTrackFor -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor">
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyisTrackFor">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-19T14:42:15Z</dc:date>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#lyricsOf -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologylyricsOf -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#lyricsOf">
-        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics"/>
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologylyricsOf">
+        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLyrics"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T08:02:03Z</dc:date>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedBy -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyplayedBy -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedBy">
-        <owl:inverseOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedTrack"/>
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyplayedBy">
+        <owl:inverseOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyplayedTrack"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack"/>
-        <rdfs:range rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#DJ"/>
+        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicTrack"/>
+        <rdfs:range rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyDJ"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T06:32:01Z</dc:date>
         <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A music track is played by a DJ</dcterms:description>
@@ -506,9 +508,9 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedTrack -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyplayedTrack -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedTrack">
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyplayedTrack">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T08:17:14Z</dc:date>
@@ -516,11 +518,11 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#released -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyreleased -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#released">
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyreleased">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#releasedByCompany"/>
+        <owl:inverseOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyreleasedByCompany"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-18T17:44:53Z</dc:date>
@@ -528,9 +530,9 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#releasedByCompany -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyreleasedByCompany -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#releasedByCompany">
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyreleasedByCompany">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain>
@@ -541,17 +543,17 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicCompany"/>
+        <rdfs:range rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicCompany"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:12:27Z</dc:date>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sings -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologysings -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sings">
-        <owl:inverseOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sungBy"/>
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologysings">
+        <owl:inverseOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologysungBy"/>
         <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/WattMusicOntology#Singer"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T19:18:20Z</dc:date>
@@ -559,12 +561,12 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sungBy -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologysungBy -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sungBy">
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologysungBy">
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor"/>
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sungBy"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyisTrackFor"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologysungBy"/>
         </owl:propertyChainAxiom>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T19:20:56Z</dc:date>
@@ -572,17 +574,17 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sungLyrics -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologysungLyrics -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sungLyrics">
-        <owl:inverseOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#wereSungBy"/>
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologysungLyrics">
+        <owl:inverseOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologywereSungBy"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#sang"/>
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasLyrics"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sings"/>
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologysings"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasLyrics"/>
         </owl:propertyChainAxiom>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-19T11:48:15Z</dc:date>
@@ -592,18 +594,18 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#wereSungBy -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologywereSungBy -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#wereSungBy">
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologywereSungBy">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-19T12:19:57Z</dc:date>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#withinAlbum -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologywithinAlbum -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#withinAlbum">
+    <owl:ObjectProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologywithinAlbum">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:41:59Z</dc:date>
@@ -741,7 +743,7 @@
     <!-- http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#releasedOn -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#releasedOn">
-        <owl:equivalentProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#releasedOn"/>
+        <owl:equivalentProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyreleasedOn"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Music"/>
         <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/WattMusicOntology#Album"/>
@@ -783,13 +785,13 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasName -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasName -->
 
-    <owl:DatatypeProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasName">
+    <owl:DatatypeProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasName">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/WattMusicOntology#Album"/>
-        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicCompany"/>
-        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Person"/>
+        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicCompany"/>
+        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyPerson"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T20:06:23Z</dc:date>
@@ -798,10 +800,10 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasTrackID -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasTrackID -->
 
-    <owl:DatatypeProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasTrackID">
-        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack"/>
+    <owl:DatatypeProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasTrackID">
+        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicTrack"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-19T11:03:51Z</dc:date>
@@ -809,9 +811,9 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#releasedOn -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyreleasedOn -->
 
-    <owl:DatatypeProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#releasedOn">
+    <owl:DatatypeProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyreleasedOn">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -819,11 +821,11 @@
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#wasPlayedOnDate -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologywasPlayedOnDate -->
 
-    <owl:DatatypeProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#wasPlayedOnDate">
+    <owl:DatatypeProperty rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologywasPlayedOnDate">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song"/>
-        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack"/>
+        <rdfs:domain rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicTrack"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T20:00:15Z</dc:date>
@@ -885,7 +887,7 @@
     <!-- http://purl.org/ontology/mo/Track -->
 
     <owl:Class rdf:about="http://purl.org/ontology/mo/Track">
-        <owl:equivalentClass rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack"/>
+        <owl:equivalentClass rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicTrack"/>
         <rdfs:comment>Note: Track signal is originally imported from music ontology. Here it is reused and it is equivalent to MusicTrack class</rdfs:comment>
     </owl:Class>
     
@@ -909,7 +911,7 @@
     <!-- http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#EnglishSong -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#EnglishSong">
-        <owl:equivalentClass rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishMusic"/>
+        <owl:equivalentClass rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishMusic"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Song"/>
     </owl:Class>
     
@@ -956,7 +958,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#released"/>
+                        <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyreleased"/>
                         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -970,7 +972,7 @@
     <!-- http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Producer -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Producer">
-        <owl:equivalentClass rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Producer"/>
+        <owl:equivalentClass rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyProducer"/>
     </owl:Class>
     
 
@@ -999,7 +1001,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Song">
         <owl:equivalentClass rdf:resource="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song"/>
-        <owl:equivalentClass rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack"/>
+        <owl:equivalentClass rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicTrack"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Music"/>
     </owl:Class>
     
@@ -1008,7 +1010,7 @@
     <!-- http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Technicain -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Technicain">
-        <owl:equivalentClass rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Technician"/>
+        <owl:equivalentClass rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTechnician"/>
     </owl:Class>
     
 
@@ -1030,7 +1032,7 @@
     <!-- http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Artist -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Artist">
-        <owl:equivalentClass rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Artist"/>
+        <owl:equivalentClass rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArtist"/>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#sang"/>
@@ -1435,7 +1437,7 @@ In the original OWL-Time the following constraint appeared:
     <!-- https://github.com/soso-maitha/ontologies/WattMusicOntology#Music -->
 
     <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/WattMusicOntology#Music">
-        <owl:disjointWith rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Person"/>
+        <owl:disjointWith rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyPerson"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-30T13:50:32Z</dc:date>
     </owl:Class>
@@ -1445,24 +1447,24 @@ In the original OWL-Time the following constraint appeared:
     <!-- https://github.com/soso-maitha/ontologies/WattMusicOntology#Singer -->
 
     <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/WattMusicOntology#Singer">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Artist"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArtist"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-30T13:51:01Z</dc:date>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicLanguageSpeaker -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicLanguageSpeaker -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicLanguageSpeaker">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicLanguageSpeaker">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sings"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicSong"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologysings"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicSong"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Person"/>
-        <owl:disjointWith rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishLanguageSpeaker"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyPerson"/>
+        <owl:disjointWith rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishLanguageSpeaker"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T09:31:47Z</dc:date>
         <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A person who speaks the Arabic lanaguage</dcterms:description>
@@ -1470,14 +1472,14 @@ In the original OWL-Time the following constraint appeared:
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicLyrics -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicLyrics -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicLyrics">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicLyrics">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLyrics"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicLyrics"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasLyrics"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicLyrics"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
@@ -1486,20 +1488,20 @@ In the original OWL-Time the following constraint appeared:
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicMusic -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicMusic">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasGenre"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicMusic"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicLyrics"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasLyrics"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicLyrics"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
@@ -1509,102 +1511,102 @@ In the original OWL-Time the following constraint appeared:
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicPop -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicPop -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicPop">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicPop">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicPop"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasGenre"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicPop"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicMusic"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T11:00:24Z</dc:date>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicSong -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicSong -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicSong">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicSong">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasGenre"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicMusic"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicLyrics"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasLyrics"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicLyrics"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasGenre"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicMusic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Artist -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArtist -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Artist">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicStaff"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArtist">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicStaff"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T19:56:33Z</dc:date>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicArabic -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicArabic -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicArabic">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicArabic">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre"/>
-                <owl:hasValue rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicArabic"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasGenre"/>
+                <owl:hasValue rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicArabic"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicMusic"/>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicEnglish -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicEnglish -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicEnglish">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishMusic"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicEnglish">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishMusic"/>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicLatin -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicLatin -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicLatin">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishMusic"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicLatin">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishMusic"/>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Composer -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyComposer -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Composer">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Artist"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyComposer">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArtist"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T19:47:21Z</dc:date>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#DJ -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyDJ -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#DJ">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicStaff"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyDJ">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicStaff"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T19:59:50Z</dc:date>
         <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DJ is a person who playes the Music Track</dcterms:description>
@@ -1612,26 +1614,26 @@ In the original OWL-Time the following constraint appeared:
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishJaz -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishJaz -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishJaz">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishMusic"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishJaz">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishMusic"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:31:30Z</dc:date>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishLanugageSpeaker -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishLanugageSpeaker -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishLanugageSpeaker">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishLanugageSpeaker">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sings"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishSong"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologysings"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishSong"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Person"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyPerson"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:30:25Z</dc:date>
         <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A person who speaks the English lanaguage</dcterms:description>
@@ -1639,23 +1641,23 @@ In the original OWL-Time the following constraint appeared:
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishLyrics -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishLyrics -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishLyrics">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishLyrics">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLyrics"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-19T09:23:35Z</dc:date>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishMusic -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishMusic -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishMusic">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishMusic">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishLyrics"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasLyrics"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishLyrics"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre"/>
@@ -1666,40 +1668,40 @@ In the original OWL-Time the following constraint appeared:
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishPop -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishPop -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishPop">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishMusic"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishPop">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishMusic"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T11:00:32Z</dc:date>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishSong -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishSong -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishSong">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishSong">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishMusic"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasGenre"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishMusic"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LatinPop -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLatinPop -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LatinPop">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishMusic"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLatinPop">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishMusic"/>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLyrics -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLyrics">
         <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/WattMusicOntology#Music"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T19:33:53Z</dc:date>
@@ -1708,17 +1710,17 @@ In the original OWL-Time the following constraint appeared:
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Maqam -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqam -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Maqam">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqam">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Maqam"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasGenre"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqam"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic"/>
-        <owl:disjointWith rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Mawwal"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicMusic"/>
+        <owl:disjointWith rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMawwal"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:27:03Z</dc:date>
         <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maqam is one of the ways to categorize classic Arabic songs</dcterms:description>
@@ -1726,36 +1728,36 @@ In the original OWL-Time the following constraint appeared:
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamHijaz -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqamHijaz -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamHijaz">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Maqam"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqamHijaz">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqam"/>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamNahawand -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqamNahawand -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamNahawand">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Maqam"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqamNahawand">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqam"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:47:05Z</dc:date>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamSaba -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqamSaba -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamSaba">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Maqam"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqamSaba">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqam"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasGenre"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic"/>
-                            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Maqam"/>
+                            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicMusic"/>
+                            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqam"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -1763,27 +1765,27 @@ In the original OWL-Time the following constraint appeared:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics"/>
-                <owl:allValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicLyrics"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasLyrics"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicLyrics"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Mawwal -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMawwal -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Mawwal">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMawwal">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicMusic"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:27:03Z</dc:date>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicCompany -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicCompany -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicCompany">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicCompany">
         <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/WattMusicOntology#Music"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:12:17Z</dc:date>
@@ -1792,28 +1794,28 @@ In the original OWL-Time the following constraint appeared:
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicStaff -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicStaff -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicStaff">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Person"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicStaff">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyPerson"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T06:56:18Z</dc:date>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicTrack -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicTrack">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedBy"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#DJ"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyplayedBy"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyDJ"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#wasPlayedOnDate"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologywasPlayedOnDate"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -1825,28 +1827,28 @@ In the original OWL-Time the following constraint appeared:
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Person -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyPerson -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Person">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyPerson">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T19:21:39Z</dc:date>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Producer -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyProducer -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Producer">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicStaff"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyProducer">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicStaff"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T06:28:01Z</dc:date>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ReleaseDate -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyReleaseDate -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ReleaseDate">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyReleaseDate">
         <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/WattMusicOntology#Album"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T19:34:15Z</dc:date>
@@ -1854,30 +1856,30 @@ In the original OWL-Time the following constraint appeared:
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Samba -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySamba -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Samba">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishMusic"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySamba">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishMusic"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T11:00:09Z</dc:date>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishLanguageSpeaker -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishLanguageSpeaker -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishLanguageSpeaker">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishLanguageSpeaker">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sings"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishSong"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologysings"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishSong"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Person"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyPerson"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sings"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishSong"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologysings"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishSong"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
@@ -1887,14 +1889,14 @@ In the original OWL-Time the following constraint appeared:
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishLyrics -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishLyrics -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishLyrics">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishLyrics">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLyrics"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishLyrics"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasLyrics"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishLyrics"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
@@ -1903,14 +1905,14 @@ In the original OWL-Time the following constraint appeared:
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishMusic -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishMusic -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishMusic">
-        <owl:equivalentClass rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishSong"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishMusic">
+        <owl:equivalentClass rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishSong"/>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishLyrics"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasLyrics"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishLyrics"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre"/>
@@ -1921,36 +1923,36 @@ In the original OWL-Time the following constraint appeared:
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishSong -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishSong -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishSong">
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishSong">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishMusic"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasGenre"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishMusic"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishLyrics"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasLyrics"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishLyrics"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishMusic"/>
+                <owl:onProperty rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyhasGenre"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishMusic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Technician -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTechnician -->
 
-    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Technician">
-        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicStaff"/>
+    <owl:Class rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTechnician">
+        <rdfs:subClassOf rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicStaff"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T06:28:23Z</dc:date>
     </owl:Class>
@@ -3266,9 +3268,9 @@ singer : Michael Jackson</dcterms:description>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Adagio -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyAdagio -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Adagio">
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyAdagio">
         <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/WattMusicOntology#Singer"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:07:03Z</dc:date>
@@ -3276,139 +3278,139 @@ singer : Michael Jackson</dcterms:description>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Ahmed -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyAhmed -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Ahmed">
-        <playedTrack rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_2"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyAhmed">
+        <main:WattMusicOntologyplayedTrack rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTrack_2"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T09:01:06Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Alf_Leila_wa_Leila -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyAlf_Leila_wa_Leila -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Alf_Leila_wa_Leila">
-        <hasGenre rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicArabic"/>
-        <hasLyrics rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics_2"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyAlf_Leila_wa_Leila">
+        <main:WattMusicOntologyhasGenre rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicArabic"/>
+        <main:WattMusicOntologyhasLyrics rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLyrics_2"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-19T09:36:14Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#BoshretKheir -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyBoshretKheir -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#BoshretKheir">
-        <hasGenre rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Khaleeji"/>
-        <sungBy rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#HussainAlJesmi"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyBoshretKheir">
+        <main:WattMusicOntologyhasGenre rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyKhaleeji"/>
+        <main:WattMusicOntologysungBy rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyHussainAlJesmi"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:38:48Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicArabic -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicArabic -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicArabic"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicArabic"/>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicEnglish -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicEnglish -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicEnglish">
-        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishMusic"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicEnglish">
+        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishMusic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicLatin -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicLatin -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicLatin">
-        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishMusic"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicLatin">
+        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishMusic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Colombia -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyColombia -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Colombia">
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyColombia">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-18T18:23:07Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Despacito -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyDespacito -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Despacito">
-        <hasGenre rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LatinPop"/>
-        <hasLyrics rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics_1"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyDespacito">
+        <main:WattMusicOntologyhasGenre rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLatinPop"/>
+        <main:WattMusicOntologyhasLyrics rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLyrics_1"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:30:58Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#HussainAlJesmi -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyHussainAlJesmi -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#HussainAlJesmi">
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyHussainAlJesmi">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:39:24Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#InTheMorningLight -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyInTheMorningLight -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#InTheMorningLight">
-        <hasGenre rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicEnglish"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyInTheMorningLight">
+        <main:WattMusicOntologyhasGenre rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicEnglish"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T19:41:46Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#KadhemAlSaher -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyKadhemAlSaher -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#KadhemAlSaher">
-        <sings rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#YesterdayInTheDream"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyKadhemAlSaher">
+        <main:WattMusicOntologysings rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyYesterdayInTheDream"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:41:11Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Khaleeji -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyKhaleeji -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Khaleeji">
-        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyKhaleeji">
+        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicMusic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LatinPop -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLatinPop -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LatinPop">
-        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishMusic"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLatinPop">
+        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishMusic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LuisFonsi -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLuisFonsi -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LuisFonsi">
-        <sings rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Despacito"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLuisFonsi">
+        <main:WattMusicOntologysings rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyDespacito"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:33:34Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics_1 -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLyrics_1 -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics_1">
-        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishLyrics"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLyrics_1">
+        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishLyrics"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:32:04Z</dc:date>
         <dcterms:description xml:lang="es">Ay
@@ -3584,10 +3586,10 @@ Despacito</dcterms:description>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics_2 -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLyrics_2 -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics_2">
-        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicLyrics"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLyrics_2">
+        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicLyrics"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-19T09:38:17Z</dc:date>
         <rdfs:isDefinedBy>الليل وسماه ونجومه وقمره، قمره وسهره
@@ -3614,216 +3616,216 @@ Despacito</dcterms:description>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Maitha -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaitha -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Maitha">
-        <playedTrack rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_3"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaitha">
+        <main:WattMusicOntologyplayedTrack rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTrack_3"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:07:21Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamHijaz -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqamHijaz -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamHijaz"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqamHijaz"/>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamSaba -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqamSaba -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamSaba">
-        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqamSaba">
+        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicMusic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#NoisematchStudio -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyNoisematchStudio -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#NoisematchStudio">
-        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicCompany"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyNoisematchStudio">
+        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicCompany"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:34:39Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Rating -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyRating -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Rating">
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyRating">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-12T13:06:20Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SabahFakhri -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySabahFakhri -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SabahFakhri">
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySabahFakhri">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:46:00Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ScabaYa -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyScabaYa -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ScabaYa">
-        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamSaba"/>
-        <sungBy rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SabahFakhri"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyScabaYa">
+        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqamSaba"/>
+        <main:WattMusicOntologysungBy rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySabahFakhri"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:45:47Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SecretGarden -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySecretGarden -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SecretGarden">
-        <hasGenre rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicLatin"/>
-        <sungBy rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Adagio"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySecretGarden">
+        <main:WattMusicOntologyhasGenre rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicLatin"/>
+        <main:WattMusicOntologysungBy rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyAdagio"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:09:30Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Spain -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpain -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Spain">
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpain">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-18T18:22:52Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#TheRainMustFall -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTheRainMustFall -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#TheRainMustFall">
-        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishMusic"/>
-        <hasGenre rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicEnglish"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTheRainMustFall">
+        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishMusic"/>
+        <main:WattMusicOntologyhasGenre rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicEnglish"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T19:46:30Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_1 -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTrack_1 -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_1">
-        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTrack_1">
+        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicTrack"/>
         <time:dayOfWeek rdf:resource="http://www.w3.org/2006/time#Thursday"/>
-        <isTrackFor rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#BoshretKheir"/>
-        <playedBy rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Maitha"/>
+        <main:WattMusicOntologyisTrackFor rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyBoshretKheir"/>
+        <main:WattMusicOntologyplayedBy rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaitha"/>
         <mo:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.9</mo:duration>
-        <wasPlayedOnDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T20:00:15Z</wasPlayedOnDate>
+        <main:WattMusicOntologywasPlayedOnDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T20:00:15Z</main:WattMusicOntologywasPlayedOnDate>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:06:07Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_2 -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTrack_2 -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_2">
-        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTrack_2">
+        <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMusicTrack"/>
         <time:dayOfWeek rdf:resource="http://www.w3.org/2006/time#Wednesday"/>
-        <isTrackFor rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Alf_Leila_wa_Leila"/>
+        <main:WattMusicOntologyisTrackFor rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyAlf_Leila_wa_Leila"/>
         <mo:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.1</mo:duration>
-        <wasPlayedOnDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T09:00:00Z</wasPlayedOnDate>
+        <main:WattMusicOntologywasPlayedOnDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T09:00:00Z</main:WattMusicOntologywasPlayedOnDate>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T08:57:31Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_3 -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTrack_3 -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_3">
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTrack_3">
         <time:dayOfWeek rdf:resource="http://www.w3.org/2006/time#Tuesday"/>
-        <isTrackFor rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ScabaYa"/>
+        <main:WattMusicOntologyisTrackFor rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyScabaYa"/>
         <mo:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.8</mo:duration>
-        <wasPlayedOnDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-02T10:10:00Z</wasPlayedOnDate>
+        <main:WattMusicOntologywasPlayedOnDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-02T10:10:00Z</main:WattMusicOntologywasPlayedOnDate>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:11:05Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_4 -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTrack_4 -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_4">
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTrack_4">
         <time:dayOfWeek rdf:resource="http://www.w3.org/2006/time#Thursday"/>
-        <isTrackFor rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Despacito"/>
-        <playedBy rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Ahmed"/>
+        <main:WattMusicOntologyisTrackFor rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyDespacito"/>
+        <main:WattMusicOntologyplayedBy rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyAhmed"/>
         <mo:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.1</mo:duration>
-        <wasPlayedOnDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T08:00:25Z</wasPlayedOnDate>
+        <main:WattMusicOntologywasPlayedOnDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T08:00:25Z</main:WattMusicOntologywasPlayedOnDate>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:35:25Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_5 -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTrack_5 -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_5">
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTrack_5">
         <time:dayOfWeek rdf:resource="http://www.w3.org/2006/time#Monday"/>
-        <isTrackFor rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Despacito"/>
-        <playedBy rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Ahmed"/>
+        <main:WattMusicOntologyisTrackFor rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyDespacito"/>
+        <main:WattMusicOntologyplayedBy rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyAhmed"/>
         <mo:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.4</mo:duration>
-        <wasPlayedOnDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-01T14:30:00Z</wasPlayedOnDate>
+        <main:WattMusicOntologywasPlayedOnDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-01T14:30:00Z</main:WattMusicOntologywasPlayedOnDate>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:36:46Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#UAE -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyUAE -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#UAE">
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyUAE">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-18T18:23:14Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#UmKulthoom -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyUmKulthoom -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#UmKulthoom">
-        <sings rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Alf_Leila_wa_Leila"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyUmKulthoom">
+        <main:WattMusicOntologysings rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyAlf_Leila_wa_Leila"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-19T09:36:35Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Vida -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyVida -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Vida">
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyVida">
         <rdf:type rdf:resource="https://github.com/soso-maitha/ontologies/WattMusicOntology#Album"/>
-        <hasSong rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Despacito"/>
-        <releasedByCompany rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#NoisematchStudio"/>
+        <main:WattMusicOntologyhasSong rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyDespacito"/>
+        <main:WattMusicOntologyreleasedByCompany rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyNoisematchStudio"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:33:00Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Yanni -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyYanni -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Yanni">
-        <compose rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#InTheMorningLight"/>
-        <compose rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#TheRainMustFall"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyYanni">
+        <main:WattMusicOntologycompose rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyInTheMorningLight"/>
+        <main:WattMusicOntologycompose rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyTheRainMustFall"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-03T19:40:26Z</dc:date>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#YesterdayInTheDream -->
+    <!-- https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyYesterdayInTheDream -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#YesterdayInTheDream">
-        <hasGenre rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamSaba"/>
+    <owl:NamedIndividual rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyYesterdayInTheDream">
+        <main:WattMusicOntologyhasGenre rdf:resource="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqamSaba"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:41:57Z</dc:date>
     </owl:NamedIndividual>
@@ -3838,34 +3840,34 @@ Despacito</dcterms:description>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicArabic">
+    <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicArabic">
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-20T16:50:28Z</dc:date>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-19T15:24:13Z</dc:date>
     </rdf:Description>
-    <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicEnglish">
+    <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicEnglish">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T11:16:16Z</dc:date>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:58:07Z</dc:date>
     </rdf:Description>
-    <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ClassicLatin">
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T14:09:54Z</dc:date>
+    <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyClassicLatin">
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T14:08:33Z</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T14:09:54Z</dc:date>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
     </rdf:Description>
-    <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LatinPop">
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
+    <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLatinPop">
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T10:30:38Z</dc:date>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T11:18:59Z</dc:date>
     </rdf:Description>
-    <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamHijaz">
+    <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqamHijaz">
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:46:47Z</dc:date>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T09:19:19Z</dc:date>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
     </rdf:Description>
-    <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamSaba">
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T09:19:04Z</dc:date>
+    <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyMaqamSaba">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maitha Khanji</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T09:19:04Z</dc:date>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-04T07:46:20Z</dc:date>
     </rdf:Description>
     
@@ -3882,31 +3884,31 @@ Despacito</dcterms:description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic"/>
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishMusic"/>
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishMusic"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicMusic"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishMusic"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishMusic"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicSong"/>
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishSong"/>
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishSong"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyArabicSong"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyEnglishSong"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpanishSong"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Colombia"/>
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Spain"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyColombia"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologySpain"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Despacito"/>
-            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics_1"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyDespacito"/>
+            <rdf:Description rdf:about="https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyLyrics_1"/>
         </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>
