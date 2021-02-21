@@ -71,33 +71,6 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://purl.org/ontology/mo/genre
-mo:genre rdf:type owl:ObjectProperty ;
-         owl:equivalentProperty <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#hasGenre> ,
-                                <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre> ;
-         rdfs:domain [ rdf:type owl:Class ;
-                       owl:unionOf ( mo:Arrangement
-                                     mo:Composition
-                                     mo:MusicalExpression
-                                     mo:MusicalItem
-                                     mo:MusicalManifestation
-                                     mo:MusicalWork
-                                     mo:Performance
-                                     mo:Recording
-                                     mo:RecordingSession
-                                     <http://xmlns.com/foaf/0.1/Agent>
-                                   )
-                     ] ;
-         mo:level "2" ;
-         rdfs:comment """
-        Associates an event (like a performance or a recording) to a particular musical genre.
-        Further version of this property may also include works and scores in the domain.
-    """ ;
-         rdfs:isDefinedBy mo: ;
-         rdfs:label "genre" ;
-         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
-
-
 ###  http://www.co-ode.org/ontologies/ont.owl#workedWithCompany
 <http://www.co-ode.org/ontologies/ont.owl#workedWithCompany> rdf:type owl:ObjectProperty ;
                                                              rdfs:subPropertyOf owl:topObjectProperty ;
@@ -280,7 +253,6 @@ owl:topObjectProperty owl:propertyChainAxiom ( <https://github.com/soso-maitha/o
 ###  http://www.w3.org/2006/time#hasDuration
 <http://www.w3.org/2006/time#hasDuration> rdf:type owl:ObjectProperty ;
                                           rdfs:subPropertyOf <http://www.w3.org/2006/time#hasTemporalDuration> ;
-                                          rdf:type owl:SymmetricProperty ;
                                           rdfs:range <http://www.w3.org/2006/time#Duration> ;
                                           rdfs:comment "Duración de una entidad temporal, expresada como un valor escalado o un valor nominal."@es ,
                                                        "Duration of a temporal entity, expressed as a scaled value or nominal value"@en ;
@@ -345,16 +317,10 @@ owl:topObjectProperty owl:propertyChainAxiom ( <https://github.com/soso-maitha/o
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre
 <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre> rdf:type owl:ObjectProperty ;
                                                                                   rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                                  rdfs:domain [ rdf:type owl:Class ;
-                                                                                                owl:unionOf ( <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics>
-                                                                                                              <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack>
-                                                                                                            )
-                                                                                              ] ;
+                                                                                  rdf:type owl:TransitiveProperty ;
+                                                                                  rdfs:domain <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
                                                                                   rdfs:range <https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre> ;
                                                                                   owl:propertyChainAxiom ( <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor>
-                                                                                                           <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre>
-                                                                                                         ) ,
-                                                                                                         ( <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#lyricsOf>
                                                                                                            <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre>
                                                                                                          ) ;
                                                                                   <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
@@ -589,15 +555,16 @@ mo:duration rdf:type owl:DatatypeProperty ;
                                                                                      rdfs:range xsd:int .
 
 
-###  http://xmlns.com/foaf/0.1/name
-<http://xmlns.com/foaf/0.1/name> rdf:type owl:DatatypeProperty ;
-                                 owl:equivalentProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasName> ;
-                                 rdfs:domain owl:Thing ;
-                                 rdfs:range rdfs:Literal ;
-                                 rdfs:comment "A name for some thing." ;
-                                 rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
-                                 rdfs:label "name" ;
-                                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+###  http://www.w3.org/2006/time#numericDuration
+<http://www.w3.org/2006/time#numericDuration> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://www.w3.org/2006/time#Duration> ;
+                                              rdfs:range xsd:decimal ;
+                                              rdfs:comment "Valor de una extensión temporal expresada como un número decimal escalado por una unidad de tiempo."@es ,
+                                                           "Value of a temporal extent expressed as a decimal number scaled by a temporal unit"@en ;
+                                              rdfs:label "Numeric value of temporal duration"@en ,
+                                                         "valor numérico de duración temporal"@es ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "Valor de una extensión temporal expresada como un número decimal escalado por una unidad de tiempo."@es ,
+                                                                                               "Value of a temporal extent expressed as a decimal number scaled by a temporal unit"@en .
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasName
@@ -646,33 +613,6 @@ mo:duration rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://purl.org/ontology/mo/Arrangement
-mo:Arrangement rdf:type owl:Class .
-
-
-###  http://purl.org/ontology/mo/Composition
-mo:Composition rdf:type owl:Class .
-
-
-###  http://purl.org/ontology/mo/Genre
-mo:Genre rdf:type owl:Class ;
-         owl:equivalentClass <https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre> ;
-         mo:level "2" ;
-         rdfs:comment """
-        An expressive style of music.
-        
-        Any taxonomy can be plug-in here. You can either define a genre by yourself, like this:
-
-        :mygenre a mo:Genre; dc:title \"electro rock\".
-
-        Or you can refer to a DBPedia genre (such as http://dbpedia.org/resource/Baroque_music), allowing semantic web
-        clients to access easily really detailed structured information about the genre you are refering to.
-    """ ;
-         rdfs:isDefinedBy mo: ;
-         rdfs:label "Genre" ;
-         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
-
-
 ###  http://purl.org/ontology/mo/Instrument
 mo:Instrument rdf:type owl:Class ;
               mo:level "2" ;
@@ -691,8 +631,6 @@ mo:Instrument rdf:type owl:Class ;
 
 ###  http://purl.org/ontology/mo/Lyrics
 mo:Lyrics rdf:type owl:Class ;
-          owl:equivalentClass <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics> ;
-          rdfs:subClassOf mo:MusicalExpression ;
           mo:level "2" ;
           rdfs:comment """
         Lyrics
@@ -700,59 +638,6 @@ mo:Lyrics rdf:type owl:Class ;
           rdfs:isDefinedBy mo: ;
           rdfs:label "lyrics" ;
           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
-
-
-###  http://purl.org/ontology/mo/MusicalExpression
-mo:MusicalExpression rdf:type owl:Class ;
-                     rdfs:subClassOf <http://purl.org/vocab/frbr/core#Expression> ;
-                     mo:level "1" ;
-                     rdfs:comment """
-The intellectual or artistic realization of a work in the form of alpha-numeric, musical, or choreographic notation, sound, etc., or any combination of such forms.    
-
-
-For example:
-
-Work #1 Franz Schubert's Trout quintet
-
-    * Expression #1 the composer's score
-    * Expression #2 sound issued from the performance by the Amadeus Quartet and Hephzibah Menuhin on piano
-    * Expression #3 sound issued from the performance by the Cleveland Quartet and Yo-Yo Ma on the cello
-    * . . . . 
-
-The Music Ontology defines the following sub-concepts of a MusicalExpression, which should be used instead of MusicalExpression itself: Score (the
-result of an arrangement), Sound (produced during a performance), Signal. However, it is possible to stick to FRBR and bypass the worflow
-mechanism this ontology defines by using the core FRBR properties on such objects. But it is often better to use events to interconnect such 
-expressions (allowing to go deeply into the production process - `this performer was playing this particular instrument at that
-particular time').
-    
-    """ ;
-                     rdfs:isDefinedBy mo: ;
-                     rdfs:label "musical expression" ;
-                     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
-
-
-###  http://purl.org/ontology/mo/MusicalItem
-mo:MusicalItem rdf:type owl:Class .
-
-
-###  http://purl.org/ontology/mo/MusicalManifestation
-mo:MusicalManifestation rdf:type owl:Class .
-
-
-###  http://purl.org/ontology/mo/MusicalWork
-mo:MusicalWork rdf:type owl:Class .
-
-
-###  http://purl.org/ontology/mo/Performance
-mo:Performance rdf:type owl:Class .
-
-
-###  http://purl.org/ontology/mo/Recording
-mo:Recording rdf:type owl:Class .
-
-
-###  http://purl.org/ontology/mo/RecordingSession
-mo:RecordingSession rdf:type owl:Class .
 
 
 ###  http://purl.org/ontology/mo/Signal
@@ -763,10 +648,6 @@ mo:Signal rdf:type owl:Class .
 mo:Track rdf:type owl:Class ;
          owl:equivalentClass <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
          rdfs:comment "Note: Track signal is originally imported from music ontology. Here it is reused and it is equivalent to MusicTrack class" .
-
-
-###  http://purl.org/vocab/frbr/core#Expression
-<http://purl.org/vocab/frbr/core#Expression> rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Artist
@@ -1064,6 +945,10 @@ In the original OWL-Time the following constraint appeared:
                                        rdfs:subClassOf <http://www.w3.org/2006/time#TemporalDuration> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <http://www.w3.org/2006/time#unitType> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://www.w3.org/2006/time#numericDuration> ;
                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
                                                        ] ;
                                        rdfs:comment "Duración de una extensión temporal expresada como un número escalado por una unidad temporal."@es ,
@@ -2463,33 +2348,6 @@ singer : Michael Jackson""" .
                                                                                         "水曜日"@ja .
 
 
-###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology#Track_6
-watt:Track_6 rdf:type owl:NamedIndividual ;
-             <http://www.w3.org/2006/time#dayOfWeek> <http://www.w3.org/2006/time#Sunday> ;
-             <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#BoshretKheir> ;
-             <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#wasPlayedOnDate> "2021-02-21T13:00:00Z"^^xsd:dateTime ;
-             <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
-             <http://purl.org/dc/elements/1.1/date> "2021-02-21T08:55:36Z"^^xsd:dateTime .
-
-
-###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology#Track_7
-watt:Track_7 rdf:type owl:NamedIndividual ;
-             <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
-             <http://purl.org/dc/elements/1.1/date> "2021-02-21T08:55:42Z"^^xsd:dateTime .
-
-
-###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology#Track_8
-watt:Track_8 rdf:type owl:NamedIndividual ;
-             <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
-             <http://purl.org/dc/elements/1.1/date> "2021-02-21T08:55:48Z"^^xsd:dateTime .
-
-
-###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology#4.9
-<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology#4.9> rdf:type owl:NamedIndividual ;
-                                                                            <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
-                                                                            <http://purl.org/dc/elements/1.1/date> "2021-02-21T09:02:13Z"^^xsd:dateTime .
-
-
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Adagio
 <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Adagio> rdf:type owl:NamedIndividual ,
                                                                                          <https://github.com/soso-maitha/ontologies/WattMusicOntology#Singer> ;
@@ -2881,7 +2739,8 @@ Despacito"""^^xsd:string ;
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_3
-<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_3> rdf:type owl:NamedIndividual ;
+<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_3> rdf:type owl:NamedIndividual ,
+                                                                                          <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
                                                                                  <http://www.w3.org/2006/time#dayOfWeek> <http://www.w3.org/2006/time#Tuesday> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ScabaYa> ;
                                                                                  mo:duration "2.8"^^xsd:float ;
@@ -2891,7 +2750,8 @@ Despacito"""^^xsd:string ;
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_4
-<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_4> rdf:type owl:NamedIndividual ;
+<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_4> rdf:type owl:NamedIndividual ,
+                                                                                          <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
                                                                                  <http://www.w3.org/2006/time#dayOfWeek> <http://www.w3.org/2006/time#Thursday> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Despacito> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedBy> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Ahmed> ;
@@ -2902,7 +2762,8 @@ Despacito"""^^xsd:string ;
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_5
-<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_5> rdf:type owl:NamedIndividual ;
+<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_5> rdf:type owl:NamedIndividual ,
+                                                                                          <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
                                                                                  <http://www.w3.org/2006/time#dayOfWeek> <http://www.w3.org/2006/time#Monday> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Despacito> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedBy> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Ahmed> ;
@@ -2969,14 +2830,14 @@ Despacito"""^^xsd:string ;
                                                                                       <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string .
 
 
-<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LatinPop> <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:30:38Z"^^xsd:dateTime ;
-                                                                                  <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
-                                                                                  <http://purl.org/dc/elements/1.1/date> "2021-02-04T11:18:59Z"^^xsd:dateTime .
+<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LatinPop> <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                                                                                  <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:30:38Z"^^xsd:dateTime ,
+                                                                                                                         "2021-02-04T11:18:59Z"^^xsd:dateTime .
 
 
-<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamHijaz> <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:46:47Z"^^xsd:dateTime ,
-                                                                                                                           "2021-02-04T09:19:19Z"^^xsd:dateTime ;
-                                                                                    <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string .
+<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamHijaz> <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:46:47Z"^^xsd:dateTime ;
+                                                                                    <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                                                                                    <http://purl.org/dc/elements/1.1/date> "2021-02-04T09:19:19Z"^^xsd:dateTime .
 
 
 <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamSaba> <http://purl.org/dc/elements/1.1/date> "2021-02-04T09:19:04Z"^^xsd:dateTime ;
