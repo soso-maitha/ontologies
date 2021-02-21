@@ -5,7 +5,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix watt: <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology#> .
+@prefix watt: <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @base <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology> .
 
@@ -2739,8 +2739,7 @@ Despacito"""^^xsd:string ;
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_3
-<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_3> rdf:type owl:NamedIndividual ,
-                                                                                          <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
+<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_3> rdf:type owl:NamedIndividual ;
                                                                                  <http://www.w3.org/2006/time#dayOfWeek> <http://www.w3.org/2006/time#Tuesday> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ScabaYa> ;
                                                                                  mo:duration "2.8"^^xsd:float ;
@@ -2750,8 +2749,7 @@ Despacito"""^^xsd:string ;
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_4
-<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_4> rdf:type owl:NamedIndividual ,
-                                                                                          <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
+<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_4> rdf:type owl:NamedIndividual ;
                                                                                  <http://www.w3.org/2006/time#dayOfWeek> <http://www.w3.org/2006/time#Thursday> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Despacito> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedBy> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Ahmed> ;
@@ -2762,8 +2760,7 @@ Despacito"""^^xsd:string ;
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_5
-<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_5> rdf:type owl:NamedIndividual ,
-                                                                                          <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
+<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_5> rdf:type owl:NamedIndividual ;
                                                                                  <http://www.w3.org/2006/time#dayOfWeek> <http://www.w3.org/2006/time#Monday> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Despacito> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedBy> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Ahmed> ;
