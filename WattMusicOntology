@@ -1,3 +1,4 @@
+@prefix : <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology#> .
 @prefix mo: <http://purl.org/ontology/mo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -139,7 +140,6 @@ It has \"Symmetric\" charactaristic. If singer X workedWith MusicCompany A then 
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#featuring
 <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#featuring> rdf:type owl:ObjectProperty ;
-                                                                                  rdfs:domain <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song> ;
                                                                                   rdfs:range <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Artist> .
 
 
@@ -156,9 +156,7 @@ It has \"Symmetric\" charactaristic. If singer X workedWith MusicCompany A then 
 
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#hasGenre
-<http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#hasGenre> rdf:type owl:ObjectProperty ;
-                                                                                 rdfs:domain <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Music> ;
-                                                                                 rdfs:range <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Genre> .
+<http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#hasGenre> rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#isA
@@ -172,9 +170,7 @@ It has \"Symmetric\" charactaristic. If singer X workedWith MusicCompany A then 
 
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#partOf
-<http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#partOf> rdf:type owl:ObjectProperty ;
-                                                                               rdfs:domain <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song> ;
-                                                                               rdfs:range <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Album> .
+<http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#partOf> rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#partOfِAlbum
@@ -189,13 +185,11 @@ It has \"Symmetric\" charactaristic. If singer X workedWith MusicCompany A then 
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#released
 <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#released> rdf:type owl:ObjectProperty ;
-                                                                                 owl:inverseOf <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#releasedBy> ;
-                                                                                 rdfs:range <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Album> .
+                                                                                 owl:inverseOf <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#releasedBy> .
 
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#releasedBy
 <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#releasedBy> rdf:type owl:ObjectProperty ;
-                                                                                   rdfs:domain <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Album> ;
                                                                                    rdfs:range <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Artist> .
 
 
@@ -203,8 +197,7 @@ It has \"Symmetric\" charactaristic. If singer X workedWith MusicCompany A then 
 <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#sang> rdf:type owl:ObjectProperty ;
                                                                              owl:equivalentProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sings> ;
                                                                              owl:inverseOf <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#sungby> ;
-                                                                             rdfs:domain <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Artist> ;
-                                                                             rdfs:range <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song> .
+                                                                             rdfs:domain <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Artist> .
 
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#showingOn
@@ -226,7 +219,6 @@ It has \"Symmetric\" charactaristic. If singer X workedWith MusicCompany A then 
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#sungby
 <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#sungby> rdf:type owl:ObjectProperty ;
-                                                                               rdfs:domain <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song> ;
                                                                                rdfs:range <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Artist> .
 
 
@@ -329,7 +321,6 @@ owl:topObjectProperty owl:propertyChainAxiom ( <https://github.com/soso-maitha/o
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics
 <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics> rdf:type owl:ObjectProperty ;
                                                                                    owl:inverseOf <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#lyricsOf> ;
-                                                                                   rdfs:domain <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song> ;
                                                                                    rdfs:range <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics> ;
                                                                                    <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
                                                                                    <http://purl.org/dc/elements/1.1/date> "2021-02-04T08:02:18Z"^^xsd:dateTime ;
@@ -341,7 +332,6 @@ owl:topObjectProperty owl:propertyChainAxiom ( <https://github.com/soso-maitha/o
                                                                                  rdfs:subPropertyOf owl:topObjectProperty ;
                                                                                  owl:inverseOf <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#withinAlbum> ;
                                                                                  rdfs:domain <https://github.com/soso-maitha/ontologies/WattMusicOntology#Album> ;
-                                                                                 rdfs:range <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song> ;
                                                                                  <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
                                                                                  <http://purl.org/dc/elements/1.1/date> "2021-02-04T10:40:53Z"^^xsd:dateTime .
 
@@ -355,6 +345,7 @@ owl:topObjectProperty owl:propertyChainAxiom ( <https://github.com/soso-maitha/o
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor
 <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor> rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:domain <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
                                                                                     <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
                                                                                     <http://purl.org/dc/elements/1.1/date> "2021-02-19T14:42:15Z"^^xsd:dateTime .
 
@@ -397,11 +388,6 @@ owl:topObjectProperty owl:propertyChainAxiom ( <https://github.com/soso-maitha/o
 <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#releasedByCompany> rdf:type owl:ObjectProperty ;
                                                                                            rdfs:subPropertyOf owl:topObjectProperty ;
                                                                                            rdf:type owl:FunctionalProperty ;
-                                                                                           rdfs:domain [ rdf:type owl:Class ;
-                                                                                                         owl:unionOf ( <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song>
-                                                                                                                       <https://github.com/soso-maitha/ontologies/WattMusicOntology#Album>
-                                                                                                                     )
-                                                                                                       ] ;
                                                                                            rdfs:range <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicCompany> ;
                                                                                            <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
                                                                                            <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:12:27Z"^^xsd:dateTime .
@@ -417,6 +403,13 @@ owl:topObjectProperty owl:propertyChainAxiom ( <https://github.com/soso-maitha/o
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sungBy
 <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sungBy> rdf:type owl:ObjectProperty ;
+                                                                                rdfs:domain [ rdf:type owl:Class ;
+                                                                                              owl:unionOf ( <https://github.com/soso-maitha/ontologies/WattMusicOntology#Album>
+                                                                                                            <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Lyrics>
+                                                                                                            <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack>
+                                                                                                            <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Song>
+                                                                                                          )
+                                                                                            ] ;
                                                                                 owl:propertyChainAxiom ( <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor>
                                                                                                          <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#sungBy>
                                                                                                        ) ;
@@ -528,8 +521,6 @@ mo:duration rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#playTime
 <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#playTime> rdf:type owl:DatatypeProperty ;
-                                                                                 rdfs:domain <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Album> ,
-                                                                                             <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song> ;
                                                                                  rdfs:range xsd:string .
 
 
@@ -537,8 +528,7 @@ mo:duration rdf:type owl:DatatypeProperty ;
 <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#releasedOn> rdf:type owl:DatatypeProperty ;
                                                                                    owl:equivalentProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#releasedOn> ;
                                                                                    rdf:type owl:FunctionalProperty ;
-                                                                                   rdfs:domain <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Music> ,
-                                                                                               <https://github.com/soso-maitha/ontologies/WattMusicOntology#Album> ;
+                                                                                   rdfs:domain <https://github.com/soso-maitha/ontologies/WattMusicOntology#Album> ;
                                                                                    rdfs:range xsd:dateTime .
 
 
@@ -550,7 +540,6 @@ mo:duration rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#youtubeViews
 <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#youtubeViews> rdf:type owl:DatatypeProperty ;
-                                                                                     rdfs:domain <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song> ;
                                                                                      rdfs:range xsd:int .
 
 
@@ -590,18 +579,12 @@ mo:duration rdf:type owl:DatatypeProperty ;
 <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#releasedOn> rdf:type owl:DatatypeProperty ;
                                                                                     rdfs:subPropertyOf owl:topDataProperty ;
                                                                                     rdf:type owl:FunctionalProperty ;
-                                                                                    rdfs:domain [ rdf:type owl:Class ;
-                                                                                                  owl:unionOf ( <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song>
-                                                                                                                <https://github.com/soso-maitha/ontologies/WattMusicOntology#Album>
-                                                                                                              )
-                                                                                                ] ;
                                                                                     rdfs:range xsd:dateTime .
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#wasPlayedOnDate
 <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#wasPlayedOnDate> rdf:type owl:DatatypeProperty ;
-                                                                                         rdfs:domain <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song> ,
-                                                                                                     <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
+                                                                                         rdfs:domain <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
                                                                                          rdfs:range xsd:dateTime ;
                                                                                          <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
                                                                                          <http://purl.org/dc/elements/1.1/date> "2021-02-03T20:00:15Z"^^xsd:dateTime ;
@@ -628,17 +611,6 @@ mo:Instrument rdf:type owl:Class ;
               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 
 
-###  http://purl.org/ontology/mo/Lyrics
-mo:Lyrics rdf:type owl:Class ;
-          mo:level "2" ;
-          rdfs:comment """
-        Lyrics
-    """ ;
-          rdfs:isDefinedBy mo: ;
-          rdfs:label "lyrics" ;
-          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
-
-
 ###  http://purl.org/ontology/mo/Signal
 mo:Signal rdf:type owl:Class .
 
@@ -661,7 +633,11 @@ mo:Track rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#EnglishSong
 <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#EnglishSong> rdf:type owl:Class ;
-                                                                                      rdfs:subClassOf <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Song> .
+                                                                                      owl:equivalentClass <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishSong> ;
+                                                                                      rdfs:subClassOf <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Song> ;
+                                                                                      owl:disjointWith <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#HindiSong> ,
+                                                                                                       <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicSong> ,
+                                                                                                       <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishSong> .
 
 
 ###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Englishspeaker
@@ -671,31 +647,14 @@ mo:Track rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#HindiSong
 <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#HindiSong> rdf:type owl:Class ;
-                                                                                    rdfs:subClassOf <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Song> .
+                                                                                    rdfs:subClassOf <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Song> ;
+                                                                                    owl:disjointWith <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicSong> ,
+                                                                                                     <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishSong> .
 
 
 ###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Hindi_speaker
 <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Hindi_speaker> rdf:type owl:Class ;
                                                                                         rdfs:subClassOf <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Radio_Jockey> .
-
-
-###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Music
-<http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Music> rdf:type owl:Class ;
-                                                                                <http://purl.org/dc/elements/1.1/creator> "Javed"^^xsd:string ;
-                                                                                <http://purl.org/dc/elements/1.1/date> ""^^xsd:dateTimeStamp .
-
-
-###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#MusicCompany
-<http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#MusicCompany> rdf:type owl:Class ;
-                                                                                       owl:equivalentClass [ owl:intersectionOf ( <http://xmlns.com/foaf/0.1/Organization>
-                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                    owl:onProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#released> ;
-                                                                                                                                    owl:minCardinality "1"^^xsd:nonNegativeInteger
-                                                                                                                                  ]
-                                                                                                                                ) ;
-                                                                                                             rdf:type owl:Class
-                                                                                                           ] ;
-                                                                                       rdfs:subClassOf <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Music> .
 
 
 ###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Producer
@@ -716,34 +675,14 @@ mo:Track rdf:type owl:Class ;
                                                                                  rdfs:subClassOf <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Artist> .
 
 
-###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Song
-<http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Song> rdf:type owl:Class ;
-                                                                               owl:equivalentClass <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song> ,
-                                                                                                   <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
-                                                                               rdfs:subClassOf <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Music> .
-
-
 ###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Technicain
 <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Technicain> rdf:type owl:Class ;
                                                                                      owl:equivalentClass <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Technician> .
 
 
-###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Album
-<http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Album> rdf:type owl:Class ;
-                                                                              owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                                    owl:onProperty <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#releasedBy> ;
-                                                                                                    owl:someValuesFrom <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Artist>
-                                                                                                  ] ;
-                                                                              rdfs:subClassOf <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Music> .
-
-
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Artist
 <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Artist> rdf:type owl:Class ;
-                                                                               owl:equivalentClass <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Artist> ,
-                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                     owl:onProperty <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#sang> ;
-                                                                                                     owl:someValuesFrom <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song>
-                                                                                                   ] ;
+                                                                               owl:equivalentClass <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Artist> ;
                                                                                rdfs:subClassOf <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Person> .
 
 
@@ -777,10 +716,6 @@ mo:Track rdf:type owl:Class ;
 <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Gender> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Genre
-<http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Genre> rdf:type owl:Class .
-
-
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Men
 <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Men> rdf:type owl:Class ;
                                                                             owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -799,10 +734,6 @@ mo:Track rdf:type owl:Class ;
                                                                                                   ] ;
                                                                               rdfs:subClassOf <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#TV_show> ;
                                                                               owl:disjointWith <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Online_Streaming> .
-
-
-###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Music
-<http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Music> rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Online_Streaming
@@ -835,7 +766,7 @@ mo:Track rdf:type owl:Class ;
                                                                                                   owl:onProperty <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#hasGenre> ;
                                                                                                   owl:hasValue <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#rap>
                                                                                                 ] ;
-                                                                            rdfs:subClassOf <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Genre> .
+                                                                            rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre> .
 
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Reggae
@@ -844,16 +775,7 @@ mo:Track rdf:type owl:Class ;
                                                                                                      owl:onProperty <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#hasGenre> ;
                                                                                                      owl:hasValue <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#reggae>
                                                                                                    ] ;
-                                                                               rdfs:subClassOf <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Genre> .
-
-
-###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song
-<http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song> rdf:type owl:Class ;
-                                                                             owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                                   owl:onProperty <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#sungby> ;
-                                                                                                   owl:someValuesFrom <http://www.w3.org/2000/10/swap/pim/contact#Person>
-                                                                                                 ] ;
-                                                                             rdfs:subClassOf <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Music> .
+                                                                               rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre> .
 
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Soul
@@ -862,7 +784,7 @@ mo:Track rdf:type owl:Class ;
                                                                                                    owl:onProperty <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#hasGenre> ;
                                                                                                    owl:hasValue <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Soul>
                                                                                                  ] ;
-                                                                             rdfs:subClassOf <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Genre> .
+                                                                             rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre> .
 
 
 ###  http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#TV_show
@@ -903,10 +825,6 @@ mo:Track rdf:type owl:Class ;
                                                                                                        owl:someValuesFrom <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#TV_show>
                                                                                                      ] ;
                                                                                  rdfs:subClassOf <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Person> .
-
-
-###  http://www.w3.org/2000/10/swap/pim/contact#Person
-<http://www.w3.org/2000/10/swap/pim/contact#Person> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
@@ -1006,8 +924,11 @@ In the original OWL-Time the following constraint appeared:
 
 ###  https://github.com/soso-maitha/ontologies/WattMusicOntology#Album
 <https://github.com/soso-maitha/ontologies/WattMusicOntology#Album> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Music> ;
-                                                                    owl:disjointWith <https://github.com/soso-maitha/ontologies/WattMusicOntology#Genre> ;
+                                                                    rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Music> ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#releasedBy> ;
+                                                                                      owl:someValuesFrom <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#Artist>
+                                                                                    ] ;
                                                                     <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
                                                                     <http://purl.org/dc/elements/1.1/date> "2021-01-30T13:51:08Z"^^xsd:dateTime .
 
@@ -1042,7 +963,6 @@ In the original OWL-Time the following constraint appeared:
                                                                                                                      owl:someValuesFrom <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicSong>
                                                                                                                    ] ;
                                                                                                rdfs:subClassOf <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Person> ;
-                                                                                               owl:disjointWith <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishLanguageSpeaker> ;
                                                                                                <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
                                                                                                <http://purl.org/dc/elements/1.1/date> "2021-02-04T09:31:47Z"^^xsd:dateTime ;
                                                                                                dcterms:description "A person who speaks the Arabic lanaguage"^^xsd:string .
@@ -1096,11 +1016,12 @@ In the original OWL-Time the following constraint appeared:
                                                                                                           owl:onProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics> ;
                                                                                                           owl:someValuesFrom <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicLyrics>
                                                                                                         ] ;
-                                                                                    rdfs:subClassOf <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song> ,
+                                                                                    rdfs:subClassOf <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Song> ,
                                                                                                     [ rdf:type owl:Restriction ;
                                                                                                       owl:onProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre> ;
                                                                                                       owl:someValuesFrom <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic>
-                                                                                                    ] .
+                                                                                                    ] ;
+                                                                                    owl:disjointWith <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishSong> .
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Artist
@@ -1195,7 +1116,7 @@ In the original OWL-Time the following constraint appeared:
                                                                                                            owl:onProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics> ;
                                                                                                            owl:someValuesFrom <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishLyrics>
                                                                                                          ] ;
-                                                                                     rdfs:subClassOf <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song> .
+                                                                                     rdfs:subClassOf <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Song> .
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#LatinPop
@@ -1262,6 +1183,14 @@ In the original OWL-Time the following constraint appeared:
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicCompany
 <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicCompany> rdf:type owl:Class ;
+                                                                                      owl:equivalentClass [ owl:intersectionOf ( <http://xmlns.com/foaf/0.1/Organization>
+                                                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                                                   owl:onProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#released> ;
+                                                                                                                                   owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                                                 ]
+                                                                                                                               ) ;
+                                                                                                            rdf:type owl:Class
+                                                                                                          ] ;
                                                                                       rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Music> ;
                                                                                       <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
                                                                                       <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:12:17Z"^^xsd:dateTime ;
@@ -1277,15 +1206,23 @@ In the original OWL-Time the following constraint appeared:
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack
 <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> rdf:type owl:Class ;
-                                                                                    owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                                          owl:onProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedBy> ;
-                                                                                                          owl:someValuesFrom <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#DJ>
-                                                                                                        ] ,
-                                                                                                        [ rdf:type owl:Restriction ;
-                                                                                                          owl:onProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#wasPlayedOnDate> ;
-                                                                                                          owl:someValuesFrom xsd:dateTime
+                                                                                    owl:equivalentClass <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Song> ,
+                                                                                                        [ rdf:type owl:Class ;
+                                                                                                          owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor> ;
+                                                                                                                          owl:someValuesFrom <https://github.com/soso-maitha/ontologies/WattMusicOntology#Music>
+                                                                                                                        ]
+                                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedBy> ;
+                                                                                                                          owl:someValuesFrom <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#DJ>
+                                                                                                                        ]
+                                                                                                                      )
                                                                                                         ] ;
-                                                                                    rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Music> ;
+                                                                                    rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Music> ,
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#wasPlayedOnDate> ;
+                                                                                                      owl:someValuesFrom xsd:dateTime
+                                                                                                    ] ;
                                                                                     <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
                                                                                     <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:57:15Z"^^xsd:dateTime ;
                                                                                     dcterms:description "Calss that represents Music Track played on Watt Radio stations"^^xsd:string .
@@ -1316,6 +1253,25 @@ In the original OWL-Time the following constraint appeared:
                                                                                rdfs:subClassOf <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishMusic> ;
                                                                                <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
                                                                                <http://purl.org/dc/elements/1.1/date> "2021-02-04T11:00:09Z"^^xsd:dateTime .
+
+
+###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Song
+<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Song> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <https://github.com/soso-maitha/ontologies/WattMusicOntology#Music> ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#sungby> ;
+                                                                                                owl:someValuesFrom <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Person>
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#withinAlbum> ;
+                                                                                                owl:someValuesFrom <https://github.com/soso-maitha/ontologies/WattMusicOntology#Album>
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#wasPlayedOnDate> ;
+                                                                                                owl:someValuesFrom xsd:dateTime
+                                                                                              ] ;
+                                                                              <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+                                                                              <http://purl.org/dc/elements/1.1/date> "2021-02-03T19:18:31Z"^^xsd:dateTime .
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishLanguageSpeaker
@@ -1367,7 +1323,7 @@ In the original OWL-Time the following constraint appeared:
                                                                                                            owl:onProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasLyrics> ;
                                                                                                            owl:someValuesFrom <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishLyrics>
                                                                                                          ] ;
-                                                                                     rdfs:subClassOf <http://www.semanticweb.org/zuuz/ontologies/2021/1/untitled-ontology-5#Song> ,
+                                                                                     rdfs:subClassOf <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Song> ,
                                                                                                      [ rdf:type owl:Restriction ;
                                                                                                        owl:onProperty <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#hasGenre> ;
                                                                                                        owl:someValuesFrom <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishMusic>
@@ -1558,7 +1514,7 @@ imran khan""" .
 
 ###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#The_chain_smoker
 <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#The_chain_smoker> rdf:type owl:NamedIndividual ,
-                                                                                                    <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#MusicCompany> .
+                                                                                                    <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicCompany> .
 
 
 ###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#believer_believer
@@ -1588,7 +1544,7 @@ composer : Scott Harris""" .
 
 ###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#imagine_Dragons
 <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#imagine_Dragons> rdf:type owl:NamedIndividual ,
-                                                                                                   <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#MusicCompany> ;
+                                                                                                   <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicCompany> ;
                                                                                           dcterms:description "company" .
 
 
@@ -1598,8 +1554,7 @@ composer : Scott Harris""" .
 
 
 ###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#magine_Dragons
-<http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#magine_Dragons> rdf:type owl:NamedIndividual ,
-                                                                                                  <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#MusicCompany> .
+<http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#magine_Dragons> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#michael_jackson
@@ -1615,7 +1570,7 @@ singer : Michael Jackson""" .
 
 ###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#the_friends_company
 <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#the_friends_company> rdf:type owl:NamedIndividual ,
-                                                                                                       <http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#MusicCompany> .
+                                                                                                       <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicCompany> .
 
 
 ###  http://www.semanticweb.org/javed/ontologies/2021/1/untitled-ontology-30#track1
@@ -2738,7 +2693,8 @@ Despacito"""^^xsd:string ;
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_3
-<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_3> rdf:type owl:NamedIndividual ;
+<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_3> rdf:type owl:NamedIndividual ,
+                                                                                          <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
                                                                                  <http://www.w3.org/2006/time#dayOfWeek> <http://www.w3.org/2006/time#Tuesday> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ScabaYa> ;
                                                                                  mo:duration "2.8"^^xsd:float ;
@@ -2748,7 +2704,8 @@ Despacito"""^^xsd:string ;
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_4
-<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_4> rdf:type owl:NamedIndividual ;
+<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_4> rdf:type owl:NamedIndividual ,
+                                                                                          <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
                                                                                  <http://www.w3.org/2006/time#dayOfWeek> <http://www.w3.org/2006/time#Thursday> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Despacito> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedBy> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Ahmed> ;
@@ -2759,7 +2716,8 @@ Despacito"""^^xsd:string ;
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_5
-<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_5> rdf:type owl:NamedIndividual ;
+<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Track_5> rdf:type owl:NamedIndividual ,
+                                                                                          <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MusicTrack> ;
                                                                                  <http://www.w3.org/2006/time#dayOfWeek> <http://www.w3.org/2006/time#Monday> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Despacito> ;
                                                                                  <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#playedBy> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#Ahmed> ;
@@ -2831,9 +2789,9 @@ Despacito"""^^xsd:string ;
                                                                                                                          "2021-02-04T11:18:59Z"^^xsd:dateTime .
 
 
-<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamHijaz> <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:46:47Z"^^xsd:dateTime ;
-                                                                                    <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
-                                                                                    <http://purl.org/dc/elements/1.1/date> "2021-02-04T09:19:19Z"^^xsd:dateTime .
+<https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamHijaz> <http://purl.org/dc/elements/1.1/date> "2021-02-04T07:46:47Z"^^xsd:dateTime ,
+                                                                                                                           "2021-02-04T09:19:19Z"^^xsd:dateTime ;
+                                                                                    <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string .
 
 
 <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#MaqamSaba> <http://purl.org/dc/elements/1.1/date> "2021-02-04T09:19:04Z"^^xsd:dateTime ;
@@ -2849,14 +2807,6 @@ Despacito"""^^xsd:string ;
   owl:members ( <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicMusic>
                 <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishMusic>
                 <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishMusic>
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#ArabicSong>
-                <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#EnglishSong>
-                <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#SpanishSong>
               )
 ] .
 
