@@ -5,7 +5,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix wattm: <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology#> .
+@prefix watt: <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @base <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology> .
 
@@ -2464,24 +2464,24 @@ singer : Michael Jackson""" .
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology#Track_6
-wattm:Track_6 rdf:type owl:NamedIndividual ;
-              <http://www.w3.org/2006/time#dayOfWeek> <http://www.w3.org/2006/time#Sunday> ;
-              <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#BoshretKheir> ;
-              <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#wasPlayedOnDate> "2021-02-21T13:00:00Z"^^xsd:dateTime ;
-              <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
-              <http://purl.org/dc/elements/1.1/date> "2021-02-21T08:55:36Z"^^xsd:dateTime .
+watt:Track_6 rdf:type owl:NamedIndividual ;
+             <http://www.w3.org/2006/time#dayOfWeek> <http://www.w3.org/2006/time#Sunday> ;
+             <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#isTrackFor> <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#BoshretKheir> ;
+             <https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntologyy#wasPlayedOnDate> "2021-02-21T13:00:00Z"^^xsd:dateTime ;
+             <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+             <http://purl.org/dc/elements/1.1/date> "2021-02-21T08:55:36Z"^^xsd:dateTime .
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology#Track_7
-wattm:Track_7 rdf:type owl:NamedIndividual ;
-              <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
-              <http://purl.org/dc/elements/1.1/date> "2021-02-21T08:55:42Z"^^xsd:dateTime .
+watt:Track_7 rdf:type owl:NamedIndividual ;
+             <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+             <http://purl.org/dc/elements/1.1/date> "2021-02-21T08:55:42Z"^^xsd:dateTime .
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology#Track_8
-wattm:Track_8 rdf:type owl:NamedIndividual ;
-              <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
-              <http://purl.org/dc/elements/1.1/date> "2021-02-21T08:55:48Z"^^xsd:dateTime .
+watt:Track_8 rdf:type owl:NamedIndividual ;
+             <http://purl.org/dc/elements/1.1/creator> "Maitha Khanji"^^xsd:string ;
+             <http://purl.org/dc/elements/1.1/date> "2021-02-21T08:55:48Z"^^xsd:dateTime .
 
 
 ###  https://github.com/soso-maitha/ontologies/blob/main/WattMusicOntology#4.9
